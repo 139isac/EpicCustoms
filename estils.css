@@ -38,7 +38,7 @@ body {
 }
 
 .card:hover .card-title {
-    color: rgb(6, 66, 6);
+    color: rgb(21, 214, 172);
 }
 
 
@@ -95,6 +95,90 @@ p, li {
     color: #ffffff;
 }
 
+
+
+
+/* Targetes */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    background-color: #ffffff;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #04c0d9;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+
+/* Navbar solo que cambie unas cosas de cero*/
+.navbar {
+    background-color: #0a0a0a;
+    box-shadow: 0 2px 4px rgba(75, 73, 73, 0.1);
+}
+
+.navbar-brand {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #b30f0f;
+    text-transform: uppercase;
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff;
+    margin: 0 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #7a7a7a;
+}
+
+/* Imatges */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+img:hover {
+    filter: brightness(0.9);
+    transform: scale(1.02);
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        padding: 0.5rem 1rem;
+    }
+}
+
 /* Botons */
 .btn {
     padding: 0.75rem 1.5rem;
@@ -135,103 +219,6 @@ p, li {
 }
 
 
-/* Targetes */
-.card {
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    background-color: #ffffff;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.card-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #d90429;
-}
-
-.card-text {
-    font-size: 1rem;
-    color: #ffffff;
-}
-/* Navbar */
-.navbar {
-    background-color: #000000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-}
-
-.navbar-brand {
-    font-size: 1.5rem;
-    color: #d90429;
-}
-
-.navbar-nav .nav-link {
-    color: #ffffff;
-    margin: 0 1rem;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.navbar-nav .nav-link:hover {
-    color: #7a7a7a;
-}
-
-/* Navbar solo que cambie unas cosas de cero*/
-.navbar {
-    background-color: #000000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.navbar-brand {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    color: #d90429;
-    text-transform: uppercase;
-}
-
-.navbar-nav .nav-link {
-    color: #ffffff;
-    transition: color 0.3s ease;
-}
-
-.navbar-nav .nav-link:hover {
-    color: #7a7a7a;
-}
-
-/* Imatges */
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-img:hover {
-    filter: brightness(0.9);
-    transform: scale(1.02);
-    transition: all 0.3s ease-in-out;
-}
-
-
-/* Responsive */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 1.8rem;
-    }
-
-    .navbar-brand {
-        font-size: 1.2rem;
-    }
-
-    .btn {
-        padding: 0.5rem 1rem;
-    }
-}
 /* Samsung-style buttons */
 .btn-primary {
     background-color: #d90429;
@@ -290,4 +277,43 @@ img:hover {
 h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     color: #ffffff;
+}
+
+
+
+
+
+/* Efecto de desvanecimiento y desplazamiento al hacer scroll */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 2.5s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+button:hover, .btn:hover {
+    transform: scale(1.1); /* Aumentar el tamaño al pasar el ratón */
+    background-color: #26b4b9; /* Cambiar el color de fondo */
+}
+
+
+
+/* Para títulos, mejorar el efecto de aparición */
+h1, h2, h3 {
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
