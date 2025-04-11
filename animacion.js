@@ -40,3 +40,28 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('cookie-banner').style.display = 'none'; // Ocultar el banner
     });
 });
+
+
+
+// Mostrar/ocultar el navbar al hacer scroll
+document.addEventListener('DOMContentLoaded', () => {
+    const navbar = document.querySelector("nav");
+    let prevScrollPos = window.pageYOffset;
+
+    window.addEventListener("scroll", () => {
+      const currentScrollPos = window.pageYOffset;
+      const isMobile = window.innerWidth <= 576;
+
+      if (isMobile) {
+        if (prevScrollPos > currentScrollPos) {
+          navbar.style.top = "0";
+        } else {
+          navbar.style.top = "-80px"; // Amaga el navbar cap amunt
+        }
+      } else {
+        navbar.style.top = "0"; // Sempre visible en pantalles grans
+      }
+
+      prevScrollPos = currentScrollPos;
+    });
+  });

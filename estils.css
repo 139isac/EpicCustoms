@@ -113,9 +113,9 @@ nav {
     padding: 1rem 2rem;
     background: linear-gradient(90deg, #000 0%, #111 100%);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
-    position: sticky;
     top: 0;
     z-index: 1000;
+    transition: top 0.4s ease;
 }
 
 .navbar-brand {
@@ -273,31 +273,88 @@ img:hover {
 }
 
 
-/* Estil del menú hamburguesa */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 25px;
-    height: 20px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 1100;
+@media (max-width: 576px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .logo {
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 0;
+        width: 100%;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: block;
+        width: 100%;
+        padding: 0.5rem;
+        font-size: 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .navbar-brand {
+        font-size: 1.4rem;
+    }
+
+
+    button, .btn {
+        margin-bottom: 10px; /* Espai entre botons */
+    }
+    .form-control {
+        margin-bottom: 15px; /* Espai entre camps del formulari */
+    }
+    .text-center {
+        padding: 0.5rem; /* Ajustar espaiat per a textos */
+    }
+
+
+    .btn-content {
+        font-size: 1.5rem ;
+        padding: 0.5rem 1rem ;
+        border-radius: 30px;
+        text-align: center;
+    }
+
+    .icon-arrow {
+        display: none;
+    }
+
+    .hero iframe,
+    iframe[src*="genially"] {
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100%;
+    }
+
+    .map-container {
+        width: 100% !important;
+    }
+
+    .col-md-4, .col-md-6 {
+        width: 100% !important;
+    }
+
+    .footer .col-md-4 {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
 }
 
-.hamburger span {
-    display: block;
-    height: 3px;
-    background-color: #fff;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-}
-
-/* Responsive complet per navbar, botons i seccions */
-@media (max-width: 768px) {
-   
-    @media (max-width: 992px) {
+@media (max-width: 992px) {
         nav {
             flex-direction: column;
             align-items: center;
@@ -333,6 +390,75 @@ img:hover {
         .navbar-brand {
             font-size: 1.4rem;
         }
+        .btn-content {
+            font-size: 1.5rem ;
+            padding: 0.5rem 1rem ;
+            border-radius: 30px;
+            text-align: center;
+        }
+    
+        .icon-arrow {
+            display: none;
+        }
+    
+        .hero iframe,
+        iframe[src*="genially"] {
+            width: 100% ;
+            height: auto ;
+            max-width: 100%;
+        }
+    
+        .map-container {
+            width: 100% ;
+        }
+    
+        .col-md-4, .col-md-6 {
+            width: 100% ;
+        }
+    
+        .footer .col-md-4 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+    }
+
+/* Responsive complet per navbar, botons i seccions */
+@media (max-width: 768px) {
+   
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .logo {
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 0;
+        width: 100%;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: block;
+        width: 100%;
+        padding: 0.5rem;
+        font-size: 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .navbar-brand {
+        font-size: 1.4rem;
     }
 
     .btn-content {
