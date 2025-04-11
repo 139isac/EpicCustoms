@@ -66,17 +66,17 @@
                         <!-- Nombre -->
                         <div class="mb-3">
                             <label for="nombre" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+                            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Escribe tu nombre" required aria-required="true">
                         </div>
                         <!-- Correo Electrónico -->
                         <div class="mb-3">
                             <label for="correo" class="form-label">Correo Electrónico</label>
-                            <input type="email" class="form-control" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+                            <input type="email" class="form-control" id="correo" name="correo" placeholder="ejemplo@correo.com" required aria-required="true">
                         </div>
                         <!-- Teléfono -->
                         <div class="mb-3">
                             <label for="telefono" class="form-label">Teléfono</label>
-                            <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Escribe tu teléfono">
+                            <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Escribe tu teléfono" aria-required="true">
                         </div>
                         <!-- Tipo de Consulta -->
                         <div class="mb-3">
@@ -91,11 +91,12 @@
                         <!-- Mensaje -->
                         <div class="mb-3">
                             <label for="mensaje" class="form-label">Mensaje</label>
-                            <textarea class="form-control" id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje o consulta aquí..." required></textarea>
+                            <textarea class="form-control" id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje o consulta aquí..." required 
+                            aria-required="true"></textarea>
                         </div>
                         <!-- Botón de Enviar -->
                         <div class="text-center">
-                            <button type="submit" class="btn btn-primary btn-lg"><strong>Enviar Mensaje 📩</strong></button>
+                            <button type="submit" class="btn btn-primary btn-lg" aria-live="polite"><strong>Enviar Mensaje 📩</strong></button>
                         </div>
 
                     </form>

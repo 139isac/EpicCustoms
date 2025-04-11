@@ -63,7 +63,8 @@ h2, h3 {
 h4, h5 {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
-    color: #7a7a7a;
+    color: #04c0d9;
+    
 }
 
 p, li {
@@ -271,24 +272,101 @@ img:hover {
     color: #26b4b9;
 }
 
-/* Media Queries */
+
+/* Estil del menú hamburguesa */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Responsive complet per navbar, botons i seccions */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 1.8rem;
+   
+    @media (max-width: 992px) {
+        nav {
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem;
+        }
+    
+        .logo {
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+    
+        .nav-links {
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            padding: 0;
+            width: 100%;
+        }
+    
+        .nav-links li {
+            width: 100%;
+            text-align: center;
+        }
+    
+        .nav-links a {
+            display: block;
+            width: 100%;
+            padding: 0.5rem;
+            font-size: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    
+        .navbar-brand {
+            font-size: 1.4rem;
+        }
     }
 
-    .navbar-brand {
-        font-size: 1.2rem;
+    .btn-content {
+        font-size: 1.5rem ;
+        padding: 0.5rem 1rem ;
+        border-radius: 30px;
+        text-align: center;
     }
 
-    .btn {
-        padding: 0.5rem 1rem;
+    .icon-arrow {
+        display: none;
     }
 
-    .container {
-        padding: 1rem;
+    .hero iframe,
+    iframe[src*="genially"] {
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100%;
+    }
+
+    .map-container {
+        width: 100% !important;
+    }
+
+    .col-md-4, .col-md-6 {
+        width: 100% !important;
+    }
+
+    .footer .col-md-4 {
+        text-align: center;
+        margin-bottom: 1rem;
     }
 }
+
 
 .cookie-banner {
     position: fixed;
